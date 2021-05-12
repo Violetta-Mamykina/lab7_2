@@ -35,7 +35,7 @@ class ExampleInstrumentedTest {
     @get:Rule
     val rule = activityScenarioRule<MainActivity>()
     private lateinit var device: UiDevice
-    
+
     @Test
     fun broadcastTest() {
         Espresso.onView(ViewMatchers.withId(R.id.button)).perform(ViewActions.click())

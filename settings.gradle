@@ -1,0 +1,2 @@
+include ':app', ':lab7_1_new'
+rootProject.name='lab7_1'
