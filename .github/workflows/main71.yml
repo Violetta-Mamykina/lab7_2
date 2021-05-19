@@ -25,6 +25,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: app-release
+          path: /home/runner/work/master/master/app-release
   test:
     runs-on: macos-latest
     needs: apk
