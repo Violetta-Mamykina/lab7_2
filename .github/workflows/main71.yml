@@ -24,8 +24,7 @@ jobs:
       - name: Download app-debug APK
         uses: actions/download-artifact@v1
         with:
-          name: app-release
-          path: /home/runner/work/master/master/app-release-unsigned
+          path: /home/runner/work/master/master/app-release-unsigned.apk
   test:
     runs-on: macos-latest
     needs: apk
