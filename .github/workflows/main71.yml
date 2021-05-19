@@ -15,6 +15,14 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  run_ui_tests_on_firebase:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download app-debug APK
+        uses: actions/download-artifact@v1
+        with:
+          name: app-debug
   test:
     runs-on: macos-latest
     steps:
@@ -26,3 +34,4 @@ jobs:
       with:
         api-level: 23
         script: ./gradlew connectedCheck --warning-mode all
+        
